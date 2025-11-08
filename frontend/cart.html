@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart | Juventus Pieces</title>
+
+  <!-- Shared + Page Styles -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1><strong>Juventus Pieces</strong></h1>
+    <nav>
+      <a href="index.html" style="color:#d4af37;"><b>Home</b></a>&nbsp;&nbsp;&nbsp;
+      <a href="products.html" style="color:#d4af37;"><b>Products</b></a>&nbsp;&nbsp;&nbsp;
+      <a href="cart.html" style="color:#d4af37;"><b>Cart</b></a>
+    </nav>
+  </header>
+
+  <!-- Cart -->
+  <div class="cart-container">
+    <h2>Your Shopping Cart</h2>
+    <div id="cart-items"></div>
+    <div id="cart-total"></div>
+    <div class="cart-buttons">
+      <button id="clear-cart">Clear Cart</button>
+      <button id="checkout-btn">Checkout</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Juventus Pieces. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/base.js"></script>
+  <script src="js/cart.js"></script>
+  <script>
+    // Redirect to checkout page on click
+    document.getElementById("checkout-btn").addEventListener("click", () => {
+      // Optional: check if cart is empty
+      const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+      if(cartItems.length === 0){
+        alert("Your cart is empty!");
+        return;
+      }
+      window.location.href = "checkout.html";
+    });
+  </script>
+</body>
+</html>

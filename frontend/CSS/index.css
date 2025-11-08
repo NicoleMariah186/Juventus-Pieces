@@ -1,0 +1,166 @@
+/* Hero Section */
+.hero {
+  position: relative;
+  background: url('../images/image1.jpg') no-repeat center center/cover;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay */
+  z-index: 1;
+  border-radius: 0;
+}
+
+.hero h2, .hero p, .hero .btn {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #d4af37;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.3em;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hero Button */
+.btn {
+  display: inline-block;
+  background: #d4af37;
+  color: #000;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+}
+
+/* About & Contact Sections */
+#about, #contact {
+  text-align: center;
+  padding: 80px 20px;
+  color: #eee;
+}
+
+#about h2, #contact h2 {
+  color: #d4af37;
+  font-size: 2.2em;
+  margin-bottom: 20px;
+}
+
+#about p, #contact p {
+  font-size: 1.1em;
+  max-width: 700px;
+  margin: 0 auto 15px;
+  line-height: 1.6;
+}
+
+/* Contact links (like email & Instagram) */
+#contact a {
+  color: #90a4fa;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+#contact a:hover {
+  color: #d4af37; /* gold on hover */
+  text-decoration: underline;
+}
+
+/* Search Bar & Button */
+.search-bar {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #d4af37;
+  background: #222;
+  color: #eee;
+  outline: none;
+}
+
+.search-bar::placeholder {
+  color: #ccc;
+}
+
+.search-btn {
+  background: #d4af37;
+  color: #000;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.search-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Cart Icon */
+.cart {
+  font-size: 1.5em;
+  position: relative;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: #d4af37;
+  color: #000;
+  border-radius: 100%;
+  padding: 3px 7px;
+  font-size: 0.5em;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+  .hero h2 {
+    font-size: 2.2em;
+  }
+
+  .hero p {
+    font-size: 1.1em;
+  }
+
+  .btn {
+    padding: 12px 25px;
+  }
+
+  #about, #contact {
+    padding: 60px 20px;
+  }
+}

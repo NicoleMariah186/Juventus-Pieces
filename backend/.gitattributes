@@ -1,0 +1,5 @@
+# Ensure consistent line endings
+* text=auto
+
+# Ignore collected static files
+backend/staticfiles/* text eol=lf
