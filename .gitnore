@@ -18,3 +18,6 @@ juventusvenv/
 # IDEs
 .vscode/
 .idea/
+
+backend/staticfiles/
+
