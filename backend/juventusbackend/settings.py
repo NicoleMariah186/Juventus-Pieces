@@ -75,14 +75,10 @@ WSGI_APPLICATION = 'juventusbackend.wsgi.application'
 
 # postgressql
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Juventus_DB',        # your database name
-        'USER': 'postgres',           # your postgres username
-        'PASSWORD': '5555',       # your postgres password
-        'HOST': 'localhost',          # or your server’s IP / domain
-        'PORT': '5432',               # default PostgreSQL port
-    }
+
+    'default': dj_database_url.config(default=os.environ.get('postgresql://juventus_pieces_db_user:ifbmUVUzMktetw8gSkN8dGADP4QIMgHo@dpg-d47kk1k9c44c73c8k0bg-a/juventus_pieces_db'))
+}
+
 }
 
 # Password validation
