@@ -23,7 +23,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'unsafe-local-secret')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =  os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'juventus-pieces.onrender.com']
+ALLOWED_HOSTS = [ 'https://juventus-pieces.onrender.com']
 
 # Application definition
 INSTALLED_APPS = [
