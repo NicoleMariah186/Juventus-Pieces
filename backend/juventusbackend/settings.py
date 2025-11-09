@@ -76,8 +76,11 @@ WSGI_APPLICATION = 'juventusbackend.wsgi.application'
 # postgressql
 DATABASES = {
 
+
     'default': dj_database_url.config(default=os.environ.get('postgresql://juventus_pieces_db_user:ifbmUVUzMktetw8gSkN8dGADP4QIMgHo@dpg-d47kk1k9c44c73c8k0bg-a/juventus_pieces_db'))
+    #'default': dj_database_url.config(default=f"sqlite:///{BASE_DIR}/db.sqlite3")
 }
+
 
 
 
