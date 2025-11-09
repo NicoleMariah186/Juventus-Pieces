@@ -4,8 +4,8 @@ from rest_framework import status
 from .models import Customer
 from .serializers import CustomerSerializer
 
-def checkout(request):
-    return render(request, "checkout.html")
+def home(request):
+    return render(request, "index.html")
 
 
 @api_view(['POST'])
