@@ -1,0 +1,88 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juventus Pieces | Products</title>
+
+  <!-- Shared + Page Styles -->
+  <link rel="stylesheet" href="% static css/base.css" />
+  <link rel="stylesheet" href="% static css/products.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1><strong>Juventus Pieces</strong></h1>
+    <nav>
+      <a href="index.html" style="color:#d4af37;"><b>Home</b></a>&nbsp;&nbsp;&nbsp;
+      <a href="products.html" style="color:#d4af37;"><b> Products</b></a>&nbsp;&nbsp;&nbsp;
+      <a href="index.html#contact" style="color:#d4af37;"><b> Contact</b></a>
+    </nav>
+    <div class="header-right">
+      <input type="text" class="search-bar" placeholder="Search products..." />
+      <button class="search-btn">🔍</button>
+      <div class="cart">
+      🛒 <span class="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Products -->
+  <h2>Our Products</h2>
+
+  <section id="watches">
+    <h3>Watches</h3>
+    <div class="product-grid">
+      <div class="product-card" data-name="Luxury Watch">
+        <img src="images/silver audemus.jpg" alt="Luxury Watch">
+        <h4>Luxury Watch</h4>
+        <p>UGX 250,000</p>
+        <button onclick="addToCart('Luxury Watch', 250000,'images/silver audemus.jpg')">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-name="Black Audemus watch">
+        <img src="images/black audemus.jpg" alt="Black Audemus watch">
+        <h4>Black Audemus watch</h4>
+        <p>UGX 120,000</p>
+        <button onclick="addToCart('Black Audemus watch', 120000,'images/black audemus.jpg')">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="bracelets">
+    <h3>Bracelets</h3>
+    <div class="product-grid">
+      <div class="product-card" data-name="Silver Bracelet">
+        <img src="images/silver bracelet.jpg" alt="Silver Bracelet">
+        <h4>Silver Bracelet</h4>
+        <p>UGX 120,000</p>
+        <button onclick="addToCart('Silver Bracelet', 120000,'images/silver bracelet.jpg')">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="rings">
+    <h3>Rings</h3>
+    <div class="product-grid">
+      <div class="product-card" data-name="Black Ring">
+        <img src="images/black rings.jpg" alt="Black Ring">
+        <h4>Black Ring</h4>
+        <p>UGX 90,000</p>
+        <button onclick="addToCart('Black Ring', 90000,'images/black rings.jpg')">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Juventus Pieces. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="% static js/base.js"></script>
+  <script src="% static js/products.js"></script>
+</body>
+</html>
