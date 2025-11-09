@@ -4,6 +4,10 @@ from rest_framework import status
 from .models import Customer
 from .serializers import CustomerSerializer
 
+def checkout(request):
+    return render(request, "checkout.html")
+
+
 @api_view(['POST'])
 def create_customer(request):
     serializer = CustomerSerializer(data=request.data)
